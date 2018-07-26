@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/g1" android:checkableBehavior="single">
+        <item
+            android:id="@+id/deng"
+            android:icon="@mipmap/ic_launcher"
+            android:title="登陆/注册"/>
+    </group>
+    <group android:id="@+id/g32"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/cgeng"
+            android:icon="@mipmap/ic_launcher"
+            android:title="所选城市"/>
+        <item
+            android:id="@+id/xuan"
+            android:icon="@mipmap/ic_launcher"
+            android:title="添加城市"/>
+        <item
+            android:id="@+id/jian"
+            android:icon="@mipmap/ic_launcher"
+            android:title="削减城市"/>
+
+        <item
+            android:id="@+id/geng"
+            android:icon="@mipmap/ic_launcher"
+            android:title="更新频率"/>
+    </group>
+
+    <group android:id="@+id/g4" android:checkableBehavior="single">
+        <item
+            android:id="@+id/guan"
+            android:icon="@mipmap/ic_launcher"
+            android:background="@drawable/select"
+            android:title="建议"/>
+        <item
+            android:id="@+id/yu"
+            android:icon="@drawable/ic_home"
+            android:background="@drawable/select"
+            android:title="关于"/>
+        <item
+            android:id="@+id/tui"
+            android:icon="@drawable/ic_home"
+            android:background="@drawable/select"
+            android:title="退出"/>
+    </group>
+
+</menu>

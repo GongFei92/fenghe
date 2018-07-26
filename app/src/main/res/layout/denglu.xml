@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+
+    >
+
+    <TableRow >
+
+        <TextView
+            android:layout_marginLeft="5pt"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="姓名"
+            android:textSize="20pt" />
+
+
+        <EditText
+            android:id="@+id/lat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:layout_marginRight="5pt"
+            android:hint=" "
+            android:selectAllOnFocus="true"
+            />
+
+    </TableRow>
+    <TableRow >
+
+        <TextView
+            android:layout_marginLeft="5pt"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="邮箱"
+            android:textSize="20pt" />
+
+
+        <EditText
+            android:id="@+id/lon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:layout_marginRight="5pt"
+            android:hint=" "
+            android:selectAllOnFocus="true"
+            />
+
+    </TableRow>
+
+</TableLayout>

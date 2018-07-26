@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">风和天气</string>
+    <drawable name="normal">#ff6501</drawable>
+    <drawable name="pressed">#32cd99</drawable>
+</resources>

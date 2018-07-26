@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <ImageView
+        android:id="@+id/bing_pic_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+            <com.coolweather.android.util.MySwipeRefreshLayout
+                android:id="@+id/swipe_refresh"
+                android:fitsSystemWindows="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <include layout="@layout/title" />
+
+            <android.support.v4.view.ViewPager
+                        android:id="@+id/myViewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </com.coolweather.android.util.MySwipeRefreshLayout>
+
+
+    <fragment
+        android:id="@+id/choose_area_fragment"
+        android:name="com.coolweather.android.ChooseAreaFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        />
+        <android.support.design.widget.NavigationView
+            android:fitsSystemWindows="false"
+            android:id="@+id/nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/navmenu"/>
+</android.support.v4.widget.DrawerLayout>
+
+</FrameLayout>

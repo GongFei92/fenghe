@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://D:\daoru\coolweather-master\CoolWeather.iml" filepath="D:\daoru\coolweather-master\CoolWeather.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fenghe_weather.iml" filepath="$PROJECT_DIR$/fenghe_weather.iml" />
+    </modules>
+  </component>
+</project>
