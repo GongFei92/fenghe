@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://D:\daoru\coolweather-master\CoolWeather.iml" filepath="D:\daoru\coolweather-master\CoolWeather.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/fenghe_weather.iml" filepath="$PROJECT_DIR$/fenghe_weather.iml" />
+      <module fileurl="file://$PROJECT_DIR$/fenghe.iml" filepath="$PROJECT_DIR$/fenghe.iml" />
     </modules>
   </component>
 </project>

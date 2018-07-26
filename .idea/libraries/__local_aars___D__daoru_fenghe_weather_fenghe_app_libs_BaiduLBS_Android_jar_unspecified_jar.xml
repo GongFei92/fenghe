@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="__local_aars__:D.\daoru\fenghe_weather\app\libs\BaiduLBS_Android.jar:unspecified@jar">
+  <library name="__local_aars__:D.\daoru\fenghe_weather\fenghe\app\libs\BaiduLBS_Android.jar:unspecified@jar">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/app/libs/BaiduLBS_Android.jar!/" />
     </CLASSES>

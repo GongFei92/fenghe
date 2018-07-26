@@ -200,8 +200,8 @@ public class WeatherActivity extends AppCompatActivity implements OnClickListene
                         login();
                         break;
                     case R.id.tui:
-                        //finish();
-                        setNotificationBuilder();
+                        finish();
+                        //setNotificationBuilder();
                         break;
                     case R.id.cgeng:
                         showListDialog();
