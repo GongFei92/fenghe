@@ -147,6 +147,10 @@ public class ChooseAreaFragment extends Fragment {
                    if (getActivity() instanceof WeatherActivity) {
                        WeatherActivity activity = (WeatherActivity) getActivity();
                        activity.drawerLayout.closeDrawers();
+                       if(activity.myFlag) {
+                           activity.juLi(2);
+                           activity.myFlag=false;
+                       }
                    }
                    return;
 
@@ -376,6 +380,10 @@ public class ChooseAreaFragment extends Fragment {
                         if (getActivity() instanceof WeatherActivity) {
                             WeatherActivity activity = (WeatherActivity) getActivity();
                             activity.drawerLayout.closeDrawers();
+                            if(activity.myFlag) {
+                                activity.juLi(2);
+                                activity.myFlag=false;
+                            }
                         }
                     }
                 });

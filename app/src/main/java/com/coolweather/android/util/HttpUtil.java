@@ -11,8 +11,8 @@ public class HttpUtil {
         //OkHttpClient client = new OkHttpClient();
 
         OkHttpClient client = new OkHttpClient.Builder()
-                .connectTimeout(2, TimeUnit.SECONDS)//设置连接超时时间
-                .readTimeout(3, TimeUnit.SECONDS)//设置读取超时时间
+                .connectTimeout(3, TimeUnit.SECONDS)//设置连接超时时间
+                .readTimeout(4, TimeUnit.SECONDS)//设置读取超时时间
                 .build();
         Request request = new Request.Builder().url(address).build();
         client.newCall(request).enqueue(callback);

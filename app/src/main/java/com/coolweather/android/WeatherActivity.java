@@ -1109,10 +1109,10 @@ public class WeatherActivity extends AppCompatActivity implements OnClickListene
 
     //private AlertDialog mAlertDialog;
     private int   myChoice=0;
-    private int[] fraq={1,2,4,8,12};
+    private int[] fraq={1,3,6,9,12};
     private     void   fraqListDialog() {
 
-        final   String[] items = {  "1个小时" ,"2个小时", "4个小时", "8个小时","12个小时"};
+        final   String[] items = {  "1个小时" ,"3个小时", "6个小时", "9个小时","12个小时"};
 
         AlertDialog.Builder listDialog =
 
