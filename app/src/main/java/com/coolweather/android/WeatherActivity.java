@@ -30,6 +30,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v4.widget.ViewDragHelper;
 
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.NotificationCompat;
 import android.text.format.Time;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -1227,13 +1228,13 @@ public class WeatherActivity extends AppCompatActivity implements OnClickListene
         remoteViews.setTextViewText(R.id.textView4, weatherInfo);
         remoteViews.setTextViewText(R.id.textView5, icityname);
         remoteViews.setTextViewText(R.id.textView6, time);
-        Notification.Builder builder=new Notification.Builder(getApplication());
-        builder.setSmallIcon(R.mipmap.fehee)
+        NotificationCompat.Builder builder=new NotificationCompat.Builder(getApplication());
+        builder.setSmallIcon(R.mipmap.earth)
                 .setLargeIcon(BitmapFactory.decodeResource(getResources(),R.mipmap.fehee))
                 .setTicker("将继续为您更新天气信息")
-                //.setWhen(System.currentTimeMillis())
-                //.setContentTitle("标题")
-                //.setContentText("内容")
+                .setWhen(System.currentTimeMillis())
+                .setContentTitle("标题")
+                .setContentText("内容")
                 //.setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                 .setDefaults(Notification.DEFAULT_SOUND|Notification.DEFAULT_VIBRATE)
                 .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
@@ -1242,7 +1243,9 @@ public class WeatherActivity extends AppCompatActivity implements OnClickListene
                 .setContentIntent(pi)
                 .setAutoCancel(true);
         Notification notification=builder.build();
+        //notification.icon=R.mipmap.fehee;
         notification.contentView=remoteViews;
+        //notification.iconLevel = 10000;
         NotificationManager manager=(NotificationManager) getSystemService(getApplicationContext().NOTIFICATION_SERVICE);
         manager.notify(1, notification);
     }
