@@ -28,6 +28,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         @Override
         public Fragment getItem(int arg0) {
             return mlist.get(arg0);//显示第几个页面
+
         }
 
         @Override
@@ -35,13 +36,14 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
             return mlist.size();//有几个页面
         }
 
-  /*  @Override
+    @Override
     public Object instantiateItem(ViewGroup container, int position) {
         Log.e(TAG, "instantiateItem:\n" );
+
         return super.instantiateItem(container, position);
 
 
-    }*/
+    }
 
     public void setMyId(int sid){
            this.myId= sid;

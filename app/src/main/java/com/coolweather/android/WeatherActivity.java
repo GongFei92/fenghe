@@ -47,6 +47,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.coolweather.android.fragment.OneFragment;
 import com.coolweather.android.fragment.ViewPagerAdapter;
 import com.coolweather.android.gson.Weather;
@@ -302,7 +303,10 @@ public class WeatherActivity extends AppCompatActivity implements OnClickListene
         }
         String bingPic = prefs.getString("bing_pic", null);
         if (bingPic != null) {
-           Glide.with(this).load(bingPic).into(bingPicImg);
+            RequestOptions options = new RequestOptions()
+                    .placeholder(R.drawable.start)
+                    .error(R.drawable.start);
+           Glide.with(this).load(bingPic).apply(options).into(bingPicImg);
         } else {
             loadBingPic();
          }
@@ -616,7 +620,10 @@ public class WeatherActivity extends AppCompatActivity implements OnClickListene
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        Glide.with(WeatherActivity.this).load(bingPic).into(bingPicImg);
+                        RequestOptions options = new RequestOptions()
+                                .placeholder(R.drawable.start)
+                                .error(R.drawable.start);
+                        Glide.with(WeatherActivity.this).load(bingPic).apply(options).into(bingPicImg);
                     }
                 });
             }

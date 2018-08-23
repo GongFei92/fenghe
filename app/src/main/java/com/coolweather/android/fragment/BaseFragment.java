@@ -16,7 +16,7 @@ import android.view.View;
  * @see #onFragmentVisibleChange(boolean)
  * @see #onFragmentFirstVisible()
  */
-public abstract class BaseFragment extends Fragment {
+public abstract class BaseFragment extends Fragment implements MyViewPagerAdapter.UpdateAble{
 
     private static final String TAG = BaseFragment.class.getSimpleName();
 
@@ -24,7 +24,12 @@ public abstract class BaseFragment extends Fragment {
     private boolean isReuseView;
     private boolean isFirstVisible;
     private View rootView;
+    private String str;
 
+    @Override
+    public void update(String str){
+        this.str=str;
+    }
 
     //setUserVisibleHint()在Fragment创建时会先被调用一次，传入isVisibleToUser = false
     //如果当前Fragment可见，那么setUserVisibleHint()会再次被调用一次，传入isVisibleToUser = true
@@ -71,8 +76,10 @@ public abstract class BaseFragment extends Fragment {
                     onFragmentFirstVisible();
                     isFirstVisible = false;
                 }
-                onFragmentVisibleChange(true);
-                isFragmentVisible = true;
+                if (!isFragmentVisible) {
+                    onFragmentVisibleChange(true);
+                    isFragmentVisible = true;
+                }
             }
         }
         super.onViewCreated(isReuseView ? rootView : view, savedInstanceState);
@@ -93,7 +100,7 @@ public abstract class BaseFragment extends Fragment {
         isFirstVisible = true;
         isFragmentVisible = false;
         rootView = null;
-        isReuseView = true;
+        isReuseView = false;
     }
 
     /**
